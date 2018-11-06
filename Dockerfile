@@ -13,5 +13,5 @@ RUN apt-get update -y && apt-get install -y \
 RUN cd /tmp/ \
     && wget -O /tmp/gatk3.5.tar.bz2 'https://software.broadinstitute.org/gatk/download/auth?package=GATK-archive&version=3.5-0-g36282e4' \
     && tar xf gatk3.5.tar.bz2 \
-    && cp GenomeAnalysisTK.jar /opt/GenomeAnalysisTK-3.5.jar \
+    && cp GenomeAnalysisTK.jar /opt/GenomeAnalysisTK.jar \
     && rm -rf /tmp/*
