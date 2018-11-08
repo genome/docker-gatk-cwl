@@ -1,8 +1,8 @@
 FROM ubuntu:xenial
-MAINTAINER John Garza <johnegarza@wustl.edu>
+MAINTAINER Alex Paul <alex.paul@wustl.edu>
 
 LABEL \
-    description="Image containing GATK v3.6"
+    description="Image containing GATK v3.5"
 
 RUN apt-get update -y && apt-get install -y \
     apt-utils \
@@ -11,7 +11,7 @@ RUN apt-get update -y && apt-get install -y \
     wget
 
 RUN cd /tmp/ \
-    && wget -O /tmp/gatk3.6.tar.bz2 'https://software.broadinstitute.org/gatk/download/auth?package=GATK-archive&version=3.6-0-g89b7209' \
-    && tar xf gatk3.6.tar.bz2 \
+    && wget -O /tmp/gatk3.5.tar.bz2 'https://software.broadinstitute.org/gatk/download/auth?package=GATK-archive&version=3.5-0-g36282e4' \
+    && tar xf gatk3.5.tar.bz2 \
     && cp GenomeAnalysisTK.jar /opt/GenomeAnalysisTK.jar \
     && rm -rf /tmp/*
